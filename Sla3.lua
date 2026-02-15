@@ -72,7 +72,7 @@ return function(ContentContainer, LocalPlayer, Players, RunService, MarketplaceS
     discordImage.ScaleType = Enum.ScaleType.Fit
     discordImage.Parent = ContentContainer
 
-    createSpacer(210, ContentContainer)
+    createSpacer(205, ContentContainer)
 
     -- Título Godzilla Hub
     local titleLabel = createLabel("Godzilla Hub", ContentContainer, 24, true)
