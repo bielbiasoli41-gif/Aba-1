@@ -63,28 +63,16 @@ return function(ContentContainer, LocalPlayer, Players, RunService, MarketplaceS
 
     createSpacer(10, ContentContainer)
 
-    -- Box com ID da imagem
-    local imageIdBox = Instance.new("Frame")
-    imageIdBox.Size = UDim2.new(0, 300, 0, 80)
-    imageIdBox.Position = UDim2.new(0.5, -150, 0, 0)
-    imageIdBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-    imageIdBox.BorderSizePixel = 0
-    imageIdBox.Parent = ContentContainer
+    -- Imagem do Discord (ao invés do box de texto)
+    local discordImage = Instance.new("ImageLabel")
+    discordImage.Size = UDim2.new(0, 300, 0, 150)
+    discordImage.Position = UDim2.new(0.5, -150, 0, 0)
+    discordImage.BackgroundTransparency = 1
+    discordImage.Image = "rbxassetid://110586608819666"
+    discordImage.ScaleType = Enum.ScaleType.Fit
+    discordImage.Parent = ContentContainer
 
-    local imageIdCorner = Instance.new("UICorner")
-    imageIdCorner.CornerRadius = UDim.new(0, 5)
-    imageIdCorner.Parent = imageIdBox
-
-    local imageIdLabel = Instance.new("TextLabel")
-    imageIdLabel.Size = UDim2.new(1, 0, 1, 0)
-    imageIdLabel.BackgroundTransparency = 1
-    imageIdLabel.Text = "Id da imagem:\n110586608819666"
-    imageIdLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
-    imageIdLabel.Font = Enum.Font.GothamBold
-    imageIdLabel.TextSize = 24
-    imageIdLabel.Parent = imageIdBox
-
-    createSpacer(90, ContentContainer)
+    createSpacer(160, ContentContainer)
 
     -- Título Godzilla Hub
     local titleLabel = createLabel("Godzilla Hub", ContentContainer, 24, true)
